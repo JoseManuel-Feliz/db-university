@@ -1,0 +1,18 @@
+1
+
+SELECT * FROM `students` WHERE YEAR(`date_of_birth`)=1990;
+
+2
+SELECT* FROM `courses` WHERE `courses`.`cfu`>10;
+
+6
+SELECT`level` FROM `degrees` WHERE `level`="magistrale";
+
+7
+SELECT COUNT(*) FROM `departments`;
+
+8
+SELECT`phone` FROM `teachers` WHERE `phone` IS NULL;
+
+10
+UPDATE `teachers` SET `office_number` = '126' WHERE `teachers`.`id` = 58; 
