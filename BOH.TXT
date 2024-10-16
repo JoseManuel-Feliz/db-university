@@ -5,6 +5,15 @@ SELECT * FROM `students` WHERE YEAR(`date_of_birth`)=1990;
 2
 SELECT* FROM `courses` WHERE `courses`.`cfu`>10;
 
+3
+SELECT DATE(`date_of_birth`) FROM `students` WHERE DATE(`date_of_birth` )<= '1993-10-15';
+
+4
+SELECT`period`&`year` FROM `courses` WHERE `period`='I semestre'&&`year`=1;
+
+5
+SELECT * FROM `exams` WHERE TIME(`hour`) > '14:00:00' && DATE(`date`)='2020-06-20';
+
 6
 SELECT`level` FROM `degrees` WHERE `level`="magistrale";
 
@@ -14,5 +23,12 @@ SELECT COUNT(*) FROM `departments`;
 8
 SELECT`phone` FROM `teachers` WHERE `phone` IS NULL;
 
+9
+INSERT INTO `students` (`id`, `degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`) 
+VALUES ('5533', '24', 'Jose Manuel', 'Feliz Garcia', '1999-07-14', '638JH3XZVC258LXZ2C', '2024/01/20', '54343', 'email@a-caso.com');
+
 10
 UPDATE `teachers` SET `office_number` = '126' WHERE `teachers`.`id` = 58; 
+
+11
+DELETE FROM `students` WHERE `students`.`id` = 5533;
